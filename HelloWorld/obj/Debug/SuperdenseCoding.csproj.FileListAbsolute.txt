@@ -1,0 +1,64 @@
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulator.Runtime.dll
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\SuperdenseCoding.exe.config
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\SuperdenseCoding.exe
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\SuperdenseCoding.pdb
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Canon.dll
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.MetaData.dll
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Primitives.dll
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Common.dll
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Core.dll
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Simulators.dll
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\System.ValueTuple.dll
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Common.xml
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Core.xml
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.xml
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Simulators.xml
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\bin\Debug\System.ValueTuple.xml
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\obj\Debug\SuperdenseCoding.csproj.CoreCompileInputs.cache
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\obj\Debug\SuperdenseCoding.csproj.CopyComplete
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\obj\Debug\SuperdenseCoding.exe
+C:\Users\gen6n\source\repos\HelloQuantumUniverse - Copy\HelloWorld\obj\Debug\SuperdenseCoding.pdb
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\Microsoft.Quantum.Simulator.Runtime.dll
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\SuperdenseCoding.exe.config
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\SuperdenseCoding.exe
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\SuperdenseCoding.pdb
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\Microsoft.Quantum.Canon.dll
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\Microsoft.Quantum.MetaData.dll
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\Microsoft.Quantum.Primitives.dll
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Common.dll
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Core.dll
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Simulators.dll
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\System.ValueTuple.dll
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Common.xml
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Core.xml
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.xml
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Simulators.xml
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\bin\Debug\System.ValueTuple.xml
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\obj\Debug\SuperdenseCoding.csproj.CoreCompileInputs.cache
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\obj\Debug\SuperdenseCoding.csproj.CopyComplete
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\obj\Debug\SuperdenseCoding.exe
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\obj\Debug\SuperdenseCoding.pdb
+C:\Users\gen6n\source\repos\SuperdenseCoding\HelloWorld\obj\Debug\SuperdenseCoding.csprojResolveAssemblyReference.cache
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\obj\Debug\SuperdenseCoding.csproj.CoreCompileInputs.cache
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Microsoft.Quantum.Simulator.Runtime.dll
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Quantum Teleportation.exe.config
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Quantum Teleportation.exe
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Quantum Teleportation.pdb
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Microsoft.Quantum.Canon.dll
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Microsoft.Quantum.MetaData.dll
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Microsoft.Quantum.Primitives.dll
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Common.dll
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Core.dll
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Simulators.dll
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\System.ValueTuple.dll
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Common.xml
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Core.xml
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.xml
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Simulators.xml
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\bin\Debug\System.ValueTuple.xml
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\obj\Debug\SuperdenseCoding.csproj.CopyComplete
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\obj\Debug\Quantum Teleportation.exe
+C:\Users\gen6n\source\repos\04 - Quantum Teleportation\HelloWorld\obj\Debug\Quantum Teleportation.pdb
