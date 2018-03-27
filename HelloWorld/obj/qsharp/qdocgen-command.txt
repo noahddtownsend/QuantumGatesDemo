@@ -1,5 +1,0 @@
-:: files ::
-Gates.qs
-Core.qs
-:: command ::
-"C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\packages\Microsoft.Quantum.Development.Kit.0.1.1801.1707-preview\build\..\tools\qdocgen\docgen.exe" --input "Gates.qs" "Core.qs" --doc-output obj\qsharp\docs\

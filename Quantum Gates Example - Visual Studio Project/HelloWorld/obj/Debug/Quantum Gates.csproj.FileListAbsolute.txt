@@ -1,0 +1,47 @@
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\obj\Debug\Quantum Gates.csproj.GenerateResource.cache
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\obj\Debug\Quantum Gates.csproj.CoreCompileInputs.cache
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Microsoft.Quantum.Simulator.Runtime.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Quantum Gates.exe.config
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Quantum Gates.exe
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Quantum Gates.pdb
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Microsoft.Quantum.Canon.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Microsoft.Quantum.MetaData.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Microsoft.Quantum.Primitives.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Common.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Core.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Simulators.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\System.ValueTuple.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Common.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Core.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Simulators.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\bin\Debug\System.ValueTuple.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\obj\Debug\Quantum.Gates.Gui.resources
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\obj\Debug\Quantum Gates.csproj.CopyComplete
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\obj\Debug\Quantum Gates.exe
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\HelloWorld\obj\Debug\Quantum Gates.pdb
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\obj\Debug\Quantum.Gates.Gui.resources
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\obj\Debug\Quantum Gates.csproj.GenerateResource.cache
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\obj\Debug\Quantum Gates.csproj.CoreCompileInputs.cache
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulator.Runtime.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Quantum Gates.exe.config
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Quantum Gates.exe
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Quantum Gates.pdb
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Canon.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.MetaData.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Primitives.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Common.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Core.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Simulators.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\System.ValueTuple.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Common.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Core.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\Microsoft.Quantum.Simulation.Simulators.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\bin\Debug\System.ValueTuple.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\obj\Debug\Quantum Gates.csproj.CopyComplete
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\obj\Debug\Quantum Gates.exe
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\obj\Debug\Quantum Gates.pdb
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example - Copy\HelloWorld\obj\Debug\Quantum Gates.csprojResolveAssemblyReference.cache
