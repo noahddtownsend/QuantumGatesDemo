@@ -45,7 +45,8 @@ namespace Quantum.PublicGates
 			using (qubits = Qubit[1]) 
 			{	
 			
-				if (i != 2) {
+				if (i != 2) 
+				{
 					mutable valueToSet = Zero;
 
 					if (i == 1) {
@@ -53,6 +54,10 @@ namespace Quantum.PublicGates
 					}
 
 					Quantum.Core.Set (valueToSet, qubits[0]);
+				} 
+				else 
+				{
+					H (qubits[0]);
 				}
 				
 				X (qubits[0]);
@@ -84,6 +89,8 @@ namespace Quantum.PublicGates
 					}
 
 					Quantum.Core.Set (valueToSet, qubits[0]);
+				} else {
+					H (qubits[0]);
 				}
 
 				if (y != 2) {
@@ -94,12 +101,14 @@ namespace Quantum.PublicGates
 					}
 
 					Quantum.Core.Set (valueToSet, qubits[1]);
+				} else {
+					H (qubits[1]);
 				}
 				
 				CNOT (qubits[0], qubits[1]);
 
 				set xResult = Quantum.Core.MeasureToInt(qubits[0]);
-				set yResult = Quantum.Core.MeasureToInt(qubits[0]);
+				set yResult = Quantum.Core.MeasureToInt(qubits[1]);
 
 				Quantum.Core.Set (Zero, qubits[0]);
 				Quantum.Core.Set (Zero, qubits[1]);

@@ -6,7 +6,7 @@ using Microsoft.Quantum.MetaData.Attributes;
 
 [assembly: OperationDeclaration("Quantum.PublicGates", "Hadamard () : Int", new string[] { }, "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs", 150L, 9L, 5L)]
 [assembly: OperationDeclaration("Quantum.PublicGates", "NOT (i : Int) : Int", new string[] { }, "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs", 699L, 40L, 5L)]
-[assembly: OperationDeclaration("Quantum.PublicGates", "CUST_CNOT (x : Int, y : Int) : (Int, Int)", new string[] { }, "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs", 1196L, 70L, 5L)]
+[assembly: OperationDeclaration("Quantum.PublicGates", "CUST_CNOT (x : Int, y : Int) : (Int, Int)", new string[] { }, "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs", 1249L, 75L, 5L)]
 #line hidden
 namespace Quantum.PublicGates
 {
@@ -130,7 +130,7 @@ namespace Quantum.PublicGates
     {
         public NOT(IOperationFactory m) : base(m)
         {
-            this.Dependencies = new Type[] { typeof(Microsoft.Quantum.Primitive.Allocate), typeof(Quantum.Core.MeasureToInt), typeof(Microsoft.Quantum.Primitive.Release), typeof(Quantum.Core.Set), typeof(Microsoft.Quantum.Primitive.X) };
+            this.Dependencies = new Type[] { typeof(Microsoft.Quantum.Primitive.Allocate), typeof(Microsoft.Quantum.Primitive.H), typeof(Quantum.Core.MeasureToInt), typeof(Microsoft.Quantum.Primitive.Release), typeof(Quantum.Core.Set), typeof(Microsoft.Quantum.Primitive.X) };
         }
 
         public override Type[] Dependencies
@@ -143,6 +143,14 @@ namespace Quantum.PublicGates
             get
             {
                 return this.Factory.Get<Allocate, Microsoft.Quantum.Primitive.Allocate>();
+            }
+        }
+
+        protected IUnitary<Qubit> MicrosoftQuantumPrimitiveH
+        {
+            get
+            {
+                return this.Factory.Get<IUnitary<Qubit>, Microsoft.Quantum.Primitive.H>();
             }
         }
 
@@ -194,30 +202,35 @@ namespace Quantum.PublicGates
 #line 48 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                     if ((i != 2L))
                     {
-#line 49 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 50 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                         var valueToSet = Result.Zero;
-#line 51 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 52 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                         if ((i == 1L))
                         {
-#line 52 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 53 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                             valueToSet = Result.One;
                         }
 
-#line 55 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 56 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                         QuantumCoreSet.Apply((valueToSet, qubits[0L]));
                     }
-
-#line 58 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
-                    MicrosoftQuantumPrimitiveX.Apply(qubits[0L]);
+                    else
+                    {
 #line 60 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+                        MicrosoftQuantumPrimitiveH.Apply(qubits[0L]);
+                    }
+
+#line 63 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+                    MicrosoftQuantumPrimitiveX.Apply(qubits[0L]);
+#line 65 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                     result = QuantumCoreMeasureToInt.Apply<Int64>(qubits[0L]);
-#line 62 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 67 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                     QuantumCoreSet.Apply((Result.Zero, qubits[0L]));
 #line hidden
                     Release.Apply(qubits);
 #line hidden
                     __result__ = result;
-#line 65 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 70 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                     return __result__;
                 }
                 finally
@@ -240,7 +253,7 @@ namespace Quantum.PublicGates
     {
         public CUST_CNOT(IOperationFactory m) : base(m)
         {
-            this.Dependencies = new Type[] { typeof(Microsoft.Quantum.Primitive.Allocate), typeof(Microsoft.Quantum.Primitive.CNOT), typeof(Quantum.Core.MeasureToInt), typeof(Microsoft.Quantum.Primitive.Release), typeof(Quantum.Core.Set) };
+            this.Dependencies = new Type[] { typeof(Microsoft.Quantum.Primitive.Allocate), typeof(Microsoft.Quantum.Primitive.CNOT), typeof(Microsoft.Quantum.Primitive.H), typeof(Quantum.Core.MeasureToInt), typeof(Microsoft.Quantum.Primitive.Release), typeof(Quantum.Core.Set) };
         }
 
         public override Type[] Dependencies
@@ -261,6 +274,14 @@ namespace Quantum.PublicGates
             get
             {
                 return this.Factory.Get<IUnitary<(Qubit,Qubit)>, Microsoft.Quantum.Primitive.CNOT>();
+            }
+        }
+
+        protected IUnitary<Qubit> MicrosoftQuantumPrimitiveH
+        {
+            get
+            {
+                return this.Factory.Get<IUnitary<Qubit>, Microsoft.Quantum.Primitive.H>();
             }
         }
 
@@ -298,59 +319,69 @@ namespace Quantum.PublicGates
                 try
                 {
                     var (x,y) = _args;
-#line 73 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 78 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                     var xResult = 0L;
-#line 74 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
-                    var yResult = 0L;
-#line 76 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
-                    var qubits = Allocate.Apply(2L);
 #line 79 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+                    var yResult = 0L;
+#line 81 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+                    var qubits = Allocate.Apply(2L);
+#line 84 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                     if ((x != 2L))
                     {
-#line 80 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 85 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                         var valueToSet = Result.Zero;
-#line 82 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 87 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                         if ((x == 1L))
                         {
-#line 83 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 88 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                             valueToSet = Result.One;
                         }
 
-#line 86 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 91 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                         QuantumCoreSet.Apply((valueToSet, qubits[0L]));
                     }
+                    else
+                    {
+#line 93 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+                        MicrosoftQuantumPrimitiveH.Apply(qubits[0L]);
+                    }
 
-#line 89 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 96 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                     if ((y != 2L))
                     {
-#line 90 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 97 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                         var valueToSet = Result.Zero;
-#line 92 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 99 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                         if ((y == 1L))
                         {
-#line 93 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 100 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                             valueToSet = Result.One;
                         }
 
-#line 96 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 103 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                         QuantumCoreSet.Apply((valueToSet, qubits[1L]));
                     }
-
-#line 99 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
-                    MicrosoftQuantumPrimitiveCNOT.Apply((qubits[0L], qubits[1L]));
-#line 101 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
-                    xResult = QuantumCoreMeasureToInt.Apply<Int64>(qubits[0L]);
-#line 102 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
-                    yResult = QuantumCoreMeasureToInt.Apply<Int64>(qubits[0L]);
-#line 104 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
-                    QuantumCoreSet.Apply((Result.Zero, qubits[0L]));
+                    else
+                    {
 #line 105 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+                        MicrosoftQuantumPrimitiveH.Apply(qubits[1L]);
+                    }
+
+#line 108 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+                    MicrosoftQuantumPrimitiveCNOT.Apply((qubits[0L], qubits[1L]));
+#line 110 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+                    xResult = QuantumCoreMeasureToInt.Apply<Int64>(qubits[0L]);
+#line 111 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+                    yResult = QuantumCoreMeasureToInt.Apply<Int64>(qubits[1L]);
+#line 113 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+                    QuantumCoreSet.Apply((Result.Zero, qubits[0L]));
+#line 114 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                     QuantumCoreSet.Apply((Result.Zero, qubits[1L]));
 #line hidden
                     Release.Apply(qubits);
 #line hidden
                     __result__ = (xResult, yResult);
-#line 108 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
+#line 117 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
                     return __result__;
                 }
                 finally
