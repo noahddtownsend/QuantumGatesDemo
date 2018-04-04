@@ -85,6 +85,11 @@
     </Compile>
     <Compile Include="MainClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <QsharpCompile Include="Gates.qs" />
@@ -102,6 +107,20 @@
     <EmbeddedResource Include="gui.resx">
       <DependentUpon>gui.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ClassicalNOTGate.png" />
+    <None Include="Images\ClassicalANDGate.png" />
+    <None Include="Images\ClassicalORGate.png" />
+    <Content Include="Images\File_Hadamard_gate.svg" />
+    <Content Include="Images\Quantum-Hadamard-gate.png" />
+    <None Include="Images\QuantumNOTGate.png" />
+    <None Include="Images\QuantumCNOTGate.png" />
+    <None Include="Images\QuantumHadamardGate.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gui));
             this.RunGateSim = new System.Windows.Forms.Button();
             this.resultLabel = new System.Windows.Forms.Label();
             this.quantumDropDown = new System.Windows.Forms.ComboBox();
@@ -37,6 +38,8 @@
             this.firstBit = new System.Windows.Forms.Button();
             this.secondBit = new System.Windows.Forms.Button();
             this.outputBit = new System.Windows.Forms.Button();
+            this.gatePictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gatePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // RunGateSim
@@ -64,13 +67,13 @@
             this.quantumDropDown.FormattingEnabled = true;
             this.quantumDropDown.Items.AddRange(new object[] {
             "Hadamard",
-            "Quantum NOT",
+            "NOT",
             "CNOT"});
             this.quantumDropDown.Location = new System.Drawing.Point(104, 14);
             this.quantumDropDown.Name = "quantumDropDown";
             this.quantumDropDown.Size = new System.Drawing.Size(121, 21);
             this.quantumDropDown.TabIndex = 2;
-            this.quantumDropDown.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.quantumDropDown.SelectedIndexChanged += new System.EventHandler(this.quantumDropDown_SelectedIndexChanged);
             // 
             // quantumRadioButton
             // 
@@ -108,6 +111,7 @@
             this.classicalDropDown.Name = "classicalDropDown";
             this.classicalDropDown.Size = new System.Drawing.Size(121, 21);
             this.classicalDropDown.TabIndex = 5;
+            this.classicalDropDown.SelectedIndexChanged += new System.EventHandler(this.classicalDropDown_SelectedIndexChanged);
             // 
             // firstBit
             // 
@@ -138,11 +142,22 @@
             this.outputBit.TabIndex = 10;
             this.outputBit.UseVisualStyleBackColor = true;
             // 
+            // gatePictureBox
+            // 
+            this.gatePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("gatePictureBox.Image")));
+            this.gatePictureBox.Location = new System.Drawing.Point(104, 64);
+            this.gatePictureBox.Name = "gatePictureBox";
+            this.gatePictureBox.Size = new System.Drawing.Size(603, 262);
+            this.gatePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gatePictureBox.TabIndex = 11;
+            this.gatePictureBox.TabStop = false;
+            // 
             // Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.gatePictureBox);
             this.Controls.Add(this.outputBit);
             this.Controls.Add(this.secondBit);
             this.Controls.Add(this.firstBit);
@@ -154,6 +169,7 @@
             this.Controls.Add(this.RunGateSim);
             this.Name = "Gui";
             this.Text = "Main";
+            ((System.ComponentModel.ISupportInitialize)(this.gatePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +186,6 @@
         private System.Windows.Forms.Button firstBit;
         private System.Windows.Forms.Button secondBit;
         private System.Windows.Forms.Button outputBit;
+        private System.Windows.Forms.PictureBox gatePictureBox;
     }
 }
