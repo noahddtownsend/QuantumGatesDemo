@@ -14,7 +14,7 @@
    viewBox="0 0 297 210"
    version="1.1"
    id="svg8"
-   inkscape:export-filename="C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\Images\ClassicalORGate.png"
+   inkscape:export-filename="C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\Images\ClassicalNOTGate.png"
    inkscape:export-xdpi="800"
    inkscape:export-ydpi="800"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
@@ -42,10 +42,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70710678"
-     inkscape:cx="370.15304"
+     inkscape:cx="134.68648"
      inkscape:cy="423.44968"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="g973"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1027"
@@ -68,7 +68,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -95,13 +95,12 @@
       <path
          inkscape:connector-curvature="0"
          id="rect950"
-         d="M 94.149014,76.792068 V 196.12544 l 88.566066,-59.71098 z"
-         style="fill:#00ffaa;fill-opacity:1;stroke:#000000;stroke-width:3.78604031;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="translate(0,-87.000001)" />
+         d="M 94.149014,-9.6787663 V 109.65461 L 182.71508,49.943626 Z"
+         style="fill:#00ffaa;fill-opacity:1;stroke:#000000;stroke-width:3.78604031;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <circle
          r="7.0087972"
-         cy="49.781807"
-         cx="185.24034"
+         cy="50.840141"
+         cx="191.0611"
          id="path968"
          style="fill:#00ffaa;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>

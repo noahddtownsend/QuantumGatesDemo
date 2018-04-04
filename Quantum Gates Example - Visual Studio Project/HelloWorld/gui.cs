@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Quantum.Gates
 {
-    enum BitStates : byte
-    {
-        Zero = 0,
-        One = 1,
-        QSuper = 2
-    }
+
 
     enum QuantumGates : int
     {
@@ -38,122 +28,212 @@ namespace Quantum.Gates
         private BitStates firstBitState = BitStates.Zero;
         private BitStates secondBitState = BitStates.Zero;
 
+        private IOBit firstInputBit;
+        private IOBit secondInputBit;
+        private IOBit firstOutputBit;
+        private IOBit secondOutputBit;
+
         private Point singleInputLocation;
         private Point dualInputLocation;
+        private Point singleOutputLocation;
+        private Point dualOutputLocation;
 
         public Gui()
         {
             InitializeComponent();
 
-            singleInputLocation = new Point(firstBit.Location.X, firstBit.Location.Y + (int)(firstBit.Height * 0.75));
-            dualInputLocation = new Point(firstBit.Location.X, firstBit.Location.Y);
 
-            firstBit.FlatStyle = FlatStyle.Flat;
-            secondBit.FlatStyle = FlatStyle.Flat;
+            singleInputLocation = new Point(firstInputBitBtn.Location.X, firstInputBitBtn.Location.Y + (int)(firstInputBitBtn.Height * 0.75));
+            dualInputLocation = new Point(firstInputBitBtn.Location.X, firstInputBitBtn.Location.Y);
+            singleOutputLocation = new Point(firstOutputBitBtn.Location.X, singleInputLocation.Y);
+            dualOutputLocation = new Point(firstOutputBitBtn.Location.X, firstOutputBitBtn.Location.Y);
 
-            firstBit.BackColor = Color.FromArgb(255, 100, 100, 100);
-            firstBit.Text = "0";
-            secondBit.BackColor = Color.FromArgb(255, 100, 100, 100);
-            secondBit.Text = "0";
+            firstInputBit = new IOBit(firstInputBitBtn);
+            secondInputBit = new IOBit(secondInputBitBtn);
+            firstOutputBit = new IOBit(firstOutputBitBtn);
+            secondOutputBit = new IOBit(secondOutputBitBtn);
 
-            outputBit.Location = new Point(outputBit.Location.X, singleInputLocation.Y);
+            singleInputBitFactory();
+
+
+            classicalDropDown.SelectedIndex = 0;
+            quantumDropDown.SelectedIndex = 0;
 
             classicalDropDown.Enabled = false;
         }
 
-        private void evaluate()
+        private void Evaluate()
         {
-            int i = 0;
-
-            if (quantumRadioButton.Checked)
+            new System.Threading.Thread(() =>
             {
+                System.Threading.Thread.CurrentThread.IsBackground = true;
 
-                switch (quantumDropDown.SelectedIndex)
+                int i = 0;
+                int index = 0;
+                try
                 {
-                    case (int)QuantumGates.Hadamard:
-                        i = Quantum.PublicGates.Driver.HadamardGate();
-                        if (i == 0)
-                        {
-                            outputBit.BackColor = Color.FromArgb(255, 100, 100, 100);
-                            outputBit.Text = "0";
-                        }
-                        else if (i == 1)
-                        {
-                            outputBit.BackColor = Color.FromArgb(255, 255, 0, 0);
-                            outputBit.Text = "1";
-                        }
-                        resultLabel.Text = $"The gate returned {i,-4}";
-                        break;
-                    case (int)QuantumGates.NOT:
-                        i = Quantum.PublicGates.Driver.NotGate((int)firstBitState);
-                        if (i == 0)
-                        {
-                            outputBit.BackColor = Color.FromArgb(255, 100, 100, 100);
-                            outputBit.Text = "0";
-                        }
-                        else if (i == 1)
-                        {
-                            outputBit.BackColor = Color.FromArgb(255, 255, 0, 0);
-                            outputBit.Text = "1";
-                        }
-                        resultLabel.Text = $"The gate returned {i,-4}";
-                        break;
-                    case (int)QuantumGates.CNOT:
-                        var j = Quantum.PublicGates.Driver.CNotGate((int)firstBitState, (int)secondBitState);
-                        var (a, b) = j;
-                        resultLabel.Text = $"The gate returned {a}, {b,-4}";
-                        break;
-                }
-            }
-            else
-            {
-                switch (classicalDropDown.SelectedIndex)
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        index = quantumDropDown.SelectedIndex;
+                    });
+                } catch (InvalidOperationException e)
                 {
-                    case (int)ClassicalGates.OR:
-                        if (firstBitState == BitStates.One || secondBitState == BitStates.One)
-                        {
-                            outputBit.BackColor = Color.FromArgb(255, 255, 0, 0);
-                            outputBit.Text = "1";
-                        }
-                        else
-                        {
-                            outputBit.BackColor = Color.FromArgb(255, 100, 100, 100);
-                            outputBit.Text = "0";
-                        }
-                        break;
-
-                    case (int)ClassicalGates.AND:
-                        if (firstBitState == BitStates.One && secondBitState == BitStates.One)
-                        {
-                            outputBit.BackColor = Color.FromArgb(255, 255, 0, 0);
-                            outputBit.Text = "1";
-                        }
-                        else
-                        {
-                            outputBit.BackColor = Color.FromArgb(255, 100, 100, 100);
-                            outputBit.Text = "0";
-                        }
-                        break;
-
-                    case (int)ClassicalGates.NOT:
-                        if (firstBitState == BitStates.Zero)
-                        {
-                            outputBit.BackColor = Color.FromArgb(255, 255, 0, 0);
-                            outputBit.Text = "1";
-                        }
-                        else
-                        {
-                            outputBit.BackColor = Color.FromArgb(255, 100, 100, 100);
-                            outputBit.Text = "0";
-                        }
-                        break;
+                    return;
                 }
-            }
+
+                    if (quantumRadioButton.Checked)
+                {
+                    switch (index)
+                    {
+                        case (int)QuantumGates.Hadamard:
+
+                            i = Quantum.PublicGates.Driver.HadamardGate();
+
+                            if (i == 0)
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    firstOutputBit.setBitStateZero();
+                                });
+                            }
+                            else if (i == 1)
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    firstOutputBit.setBitStateOne();
+                                });
+                            }
+                            this.Invoke((MethodInvoker)delegate
+                            {
+                                resultLabel.Text = $"The gate returned {i,-4}";
+                            });
+                            break;
+                        case (int)QuantumGates.NOT:
+                            i = Quantum.PublicGates.Driver.NotGate((int)firstInputBit.getBitState());
+                            if (i == 0)
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    firstOutputBit.setBitStateZero();
+                                });
+                            }
+                            else if (i == 1)
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    firstOutputBit.setBitStateOne();
+                                });
+                            }
+                            this.Invoke((MethodInvoker)delegate
+                            {
+                                resultLabel.Text = $"The gate returned {i,-4}";
+                            });
+                            break;
+                        case (int)QuantumGates.CNOT:
+                            var j = Quantum.PublicGates.Driver.CNotGate((int)firstInputBit.getBitState(), (int)secondInputBit.getBitState());
+                            var (a, b) = j;
+
+                            if (a == 0)
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    firstOutputBit.setBitStateZero();
+                                });
+                            } else
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    firstOutputBit.setBitStateOne();
+                                });
+                            }
+
+                            if (b == 0)
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    secondOutputBit.setBitStateZero();
+                                });
+                            } else
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    secondOutputBit.setBitStateOne();
+                                });
+                            }
+
+                            this.Invoke((MethodInvoker)delegate
+                            {
+                                resultLabel.Text = $"The gate returned {a}, {b,-4}";
+                            });
+                            break;
+                    }
+                }
+                else
+                {
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        index = classicalDropDown.SelectedIndex;
+                    });
+                    switch (index)
+                    {
+                        case (int)ClassicalGates.OR:
+                            if (firstInputBit.getBitState() == BitStates.One || secondInputBit.getBitState() == BitStates.One)
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    firstOutputBit.setBitStateOne();
+                                });
+                            }
+                            else
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    firstOutputBit.setBitStateZero();
+                                });
+                            }
+                            break;
+
+                        case (int)ClassicalGates.AND:
+                            if (firstInputBit.getBitState() == BitStates.One && secondInputBit.getBitState() == BitStates.One)
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    firstOutputBit.setBitStateOne();
+                                });
+                            }
+                            else
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    firstOutputBit.setBitStateZero();
+                                });
+                            }
+                            break;
+
+                        case (int)ClassicalGates.NOT:
+                            if (firstInputBit.getBitState() == BitStates.Zero)
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    firstOutputBit.setBitStateOne();
+                                });
+                            }
+                            else
+                            {
+                                this.Invoke((MethodInvoker)delegate
+                                {
+                                    firstOutputBit.setBitStateZero();
+                                });
+                            }
+                            break;
+                    }
+                }
+            }).Start();
         }
 
         private void runSimClick(object sender, EventArgs e)
         {
-            evaluate();
+            Evaluate();
         }
 
         private void quantumDropDown_SelectedIndexChanged(object sender, EventArgs e)
@@ -167,18 +247,18 @@ namespace Quantum.Gates
             {
                 case (int)QuantumGates.Hadamard:
                     gatePictureBox.Image = Properties.Resources.QuantumHadamardGate;
-                    evaluate();
-                    singleBitFactory();
+                    Evaluate();
+                    singleInputBitFactory();
                     break;
                 case (int)QuantumGates.NOT:
                     gatePictureBox.Image = Properties.Resources.QuantumNOTGate;
-                    evaluate();
-                    singleBitFactory();
+                    Evaluate();
+                    singleInputBitFactory();
                     break;
                 case (int)QuantumGates.CNOT:
                     gatePictureBox.Image = Properties.Resources.QuantumCNOTGate;
-                    evaluate();
-                    dualBitFactory();
+                    Evaluate();
+                    dualIOBitFactory();
                     break;
                 default:
                     gatePictureBox.Image = null;
@@ -191,53 +271,41 @@ namespace Quantum.Gates
 
         }
 
-        private void firstBit_Click(object sender, EventArgs e)
+        private void firstInputBit_Click(object sender, EventArgs e)
         {
-            if (firstBitState == BitStates.Zero)
+            if (firstInputBit.getBitState() == BitStates.Zero)
             {
-                ++firstBitState;
-                firstBit.BackColor = Color.FromArgb(255, 255, 0, 0);
-                firstBit.Text = "1";
+                firstInputBit.setBitStateOne();
             }
-            else if (firstBitState == BitStates.One && quantumRadioButton.Checked)
+            else if (firstInputBit.getBitState() == BitStates.One && quantumRadioButton.Checked)
             {
-                ++firstBitState;
-                firstBit.BackColor = Color.FromArgb(255, 200, 0, 125);
-                firstBit.Text = "Quantum";
+                firstInputBit.setBitStateQuantum();
             }
             else
             {
-                firstBitState = BitStates.Zero;
-                firstBit.BackColor = Color.FromArgb(255, 100, 100, 100);
-                firstBit.Text = "0";
+                firstInputBit.setBitStateZero();
             }
 
-            evaluate();
+            Evaluate();
         }
 
-        private void secondBit_Click(object sender, EventArgs e)
+        private void secondInputBit_Click(object sender, EventArgs e)
         {
 
-            if (secondBitState == BitStates.Zero)
+            if (secondInputBit.getBitState() == BitStates.Zero)
             {
-                ++secondBitState;
-                secondBit.BackColor = Color.FromArgb(255, 255, 0, 0);
-                secondBit.Text = "1";
+                secondInputBit.setBitStateOne();
             }
-            else if (secondBitState == BitStates.One && quantumRadioButton.Checked)
+            else if (secondInputBit.getBitState() == BitStates.One && quantumRadioButton.Checked)
             {
-                ++secondBitState;
-                secondBit.BackColor = Color.FromArgb(255, 200, 0, 125);
-                secondBit.Text = "Quantum";
+                secondInputBit.setBitStateQuantum();
             }
             else
             {
-                secondBitState = BitStates.Zero;
-                secondBit.BackColor = Color.FromArgb(255, 100, 100, 100);
-                secondBit.Text = "0";
+                secondInputBit.setBitStateZero();
             }
 
-            evaluate();
+            Evaluate();
         }
 
         private void quantumRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -265,18 +333,14 @@ namespace Quantum.Gates
                 classicalDropDown.Enabled = false;
             }
 
-            if (firstBitState == BitStates.QSuper)
+            if (firstInputBit.getBitState() == BitStates.QSuper)
             {
-                firstBitState = BitStates.Zero;
-                firstBit.BackColor = Color.FromArgb(255, 100, 100, 100);
-                firstBit.Text = "0";
+                firstInputBit.setBitStateZero();
             }
 
-            if (secondBitState == BitStates.QSuper)
+            if (secondInputBit.getBitState() == BitStates.QSuper)
             {
-                secondBitState = BitStates.Zero;
-                secondBit.BackColor = Color.FromArgb(255, 100, 100, 100);
-                secondBit.Text = "0";
+                secondInputBit.setBitStateZero();
             }
         }
 
@@ -291,20 +355,20 @@ namespace Quantum.Gates
             {
                 case (int)ClassicalGates.OR:
                     gatePictureBox.Image = Properties.Resources.ClassicalORGate;
-                    evaluate();
-                    dualBitFactory();
+                    Evaluate();
+                    dualInputBitFactory();
                     break;
 
                 case (int)ClassicalGates.AND:
                     gatePictureBox.Image = Properties.Resources.ClassicalANDGate;
-                    evaluate();
-                    dualBitFactory();
+                    Evaluate();
+                    dualInputBitFactory();
                     break;
 
                 case (int)ClassicalGates.NOT:
                     gatePictureBox.Image = Properties.Resources.ClassicalNOTGate;
-                    evaluate();
-                    singleBitFactory();
+                    Evaluate();
+                    singleInputBitFactory();
                     break;
                 default:
                     gatePictureBox.Image = null;
@@ -313,17 +377,31 @@ namespace Quantum.Gates
             }
         }
 
-        private void singleBitFactory()
+        private void singleInputBitFactory()
         {
-            secondBit.Visible = false;
-            firstBit.Location = singleInputLocation;
+            secondInputBitBtn.Visible = false;
+            secondOutputBitBtn.Visible = false;
+            firstInputBitBtn.Location = singleInputLocation;
+            firstOutputBitBtn.Location = singleOutputLocation;
         }
 
-        private void dualBitFactory()
+        private void dualInputBitFactory()
         {
-            secondBit.Visible = true;
-            firstBit.Location = dualInputLocation;
+            secondInputBitBtn.Visible = true;
+            secondOutputBitBtn.Visible = false;
+            firstInputBitBtn.Location = dualInputLocation;
+            firstOutputBitBtn.Location = singleOutputLocation;
         }
+
+        private void dualIOBitFactory()
+        {
+            secondInputBitBtn.Visible = true;
+            secondOutputBitBtn.Visible = true;
+            firstInputBitBtn.Location = dualInputLocation;
+            firstOutputBitBtn.Location = dualOutputLocation;
+        }
+
+        
 
     }
 }
