@@ -76,18 +76,19 @@ namespace Quantum.Gates
                     {
                         index = quantumDropDown.SelectedIndex;
                     });
-                } catch (InvalidOperationException e)
+                }
+                catch (InvalidOperationException e)
                 {
                     return;
                 }
 
-                    if (quantumRadioButton.Checked)
+                if (quantumRadioButton.Checked)
                 {
                     switch (index)
                     {
                         case (int)QuantumGates.Hadamard:
 
-                            i = Quantum.PublicGates.Driver.HadamardGate();
+                            i = Quantum.PublicGates.Driver.HadamardGate((int)firstInputBit.getBitState());
 
                             if (i == 0)
                             {
@@ -139,7 +140,8 @@ namespace Quantum.Gates
                                 {
                                     firstOutputBit.setBitStateZero();
                                 });
-                            } else
+                            }
+                            else
                             {
                                 this.Invoke((MethodInvoker)delegate
                                 {
@@ -153,7 +155,8 @@ namespace Quantum.Gates
                                 {
                                     secondOutputBit.setBitStateZero();
                                 });
-                            } else
+                            }
+                            else
                             {
                                 this.Invoke((MethodInvoker)delegate
                                 {
@@ -401,7 +404,7 @@ namespace Quantum.Gates
             firstOutputBitBtn.Location = dualOutputLocation;
         }
 
-        
+
 
     }
 }

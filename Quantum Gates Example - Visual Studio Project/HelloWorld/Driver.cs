@@ -6,12 +6,12 @@ namespace Quantum.PublicGates
 {
     class Driver
     {
-        public static int HadamardGate ()
+        public static int HadamardGate (int i)
         {
             // create the quantum computer simulator
             using (var sim = new QuantumSimulator())
             {
-                var res = Hadamard.Run(sim).Result;
+                var res = Hadamard.Run(sim, i).Result;
 
                 return (int) res;
             }

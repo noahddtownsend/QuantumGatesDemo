@@ -5,7 +5,7 @@ namespace Quantum.PublicGates
     open Microsoft.Quantum.Canon;
 
 
-	operation Hadamard () : (Int)
+	operation Hadamard (i : Int) : (Int)
     {
         body
         {
@@ -13,7 +13,15 @@ namespace Quantum.PublicGates
 
 			using (qubits = Qubit[1]) 
 			{				
-				Quantum.Core.Set (Zero, qubits[0]);
+				if (i != 2) 
+				{
+					if (i == 0) {
+						Quantum.Core.Set (Zero, qubits[0]);
+					}
+					else {
+						Quantum.Core.Set (One, qubits[0]);
+					}					
+				} 
 				
 				H (qubits[0]);
 				H (qubits[0]);
@@ -47,13 +55,12 @@ namespace Quantum.PublicGates
 			
 				if (i != 2) 
 				{
-					mutable valueToSet = Zero;
-
-					if (i == 1) {
-						set valueToSet = One;
+					if (i == 0) {
+						Quantum.Core.Set (Zero, qubits[0]);
 					}
-
-					Quantum.Core.Set (valueToSet, qubits[0]);
+					else {
+						Quantum.Core.Set (One, qubits[0]);
+					}		
 				} 
 				else 
 				{
@@ -82,25 +89,23 @@ namespace Quantum.PublicGates
 			{	
 			
 				if (x != 2) {
-					mutable valueToSet = Zero;
-
-					if (x == 1) {
-						set valueToSet = One;
+					if (x == 0) {
+						Quantum.Core.Set (Zero, qubits[0]);
 					}
-
-					Quantum.Core.Set (valueToSet, qubits[0]);
+					else {
+						Quantum.Core.Set (One, qubits[0]);
+					}		
 				} else {
 					H (qubits[0]);
 				}
 
 				if (y != 2) {
-					mutable valueToSet = Zero;
-
-					if (y == 1) {
-						set valueToSet = One;
+					if (y == 0) {
+						Quantum.Core.Set (Zero, qubits[0]);
 					}
-
-					Quantum.Core.Set (valueToSet, qubits[1]);
+					else {
+						Quantum.Core.Set (One, qubits[0]);
+					}		
 				} else {
 					H (qubits[1]);
 				}
