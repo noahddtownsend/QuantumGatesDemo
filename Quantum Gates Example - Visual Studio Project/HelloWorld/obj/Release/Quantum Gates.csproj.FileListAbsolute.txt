@@ -1,0 +1,24 @@
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Microsoft.Quantum.Simulator.Runtime.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Quantum Gates.exe.config
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Quantum Gates.exe
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Quantum Gates.pdb
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Microsoft.Quantum.Canon.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Microsoft.Quantum.MetaData.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Microsoft.Quantum.Primitives.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Microsoft.Quantum.Simulation.Common.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Microsoft.Quantum.Simulation.Core.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Microsoft.Quantum.Simulation.Simulators.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\System.ValueTuple.dll
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Microsoft.Quantum.Simulation.Common.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Microsoft.Quantum.Simulation.Core.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\Microsoft.Quantum.Simulation.Simulators.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\bin\Release\System.ValueTuple.xml
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\obj\Release\Quantum.Gates.Gui.resources
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\obj\Release\Quantum.Gates.Properties.Resources.resources
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\obj\Release\Quantum Gates.csproj.GenerateResource.cache
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\obj\Release\Quantum Gates.csproj.CoreCompileInputs.cache
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\obj\Release\Quantum Gates.csproj.CopyComplete
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\obj\Release\Quantum Gates.exe
+C:\Users\gen6n\source\repos\00 - Quantum Gates Example\QuantumGatesDemo\Quantum Gates Example - Visual Studio Project\HelloWorld\obj\Release\Quantum Gates.pdb

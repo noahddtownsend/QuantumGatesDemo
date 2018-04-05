@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gui));
             this.RunGateSim = new System.Windows.Forms.Button();
             this.resultLabel = new System.Windows.Forms.Label();
             this.quantumDropDown = new System.Windows.Forms.ComboBox();
@@ -40,28 +41,29 @@
             this.gatePictureBox = new System.Windows.Forms.PictureBox();
             this.secondOutputBitBtn = new System.Windows.Forms.Button();
             this.numEvalsInput = new System.Windows.Forms.NumericUpDown();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gatePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEvalsInput)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // RunGateSim
             // 
-            this.RunGateSim.Location = new System.Drawing.Point(713, 415);
+            this.RunGateSim.Location = new System.Drawing.Point(708, 415);
             this.RunGateSim.Name = "RunGateSim";
             this.RunGateSim.Size = new System.Drawing.Size(75, 23);
-            this.RunGateSim.TabIndex = 0;
+            this.RunGateSim.TabIndex = 6;
             this.RunGateSim.Text = "Evaluate";
             this.RunGateSim.UseVisualStyleBackColor = true;
             this.RunGateSim.Click += new System.EventHandler(this.runSimClick);
             // 
             // resultLabel
             // 
-            this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(381, 415);
+            this.resultLabel.Location = new System.Drawing.Point(3, -3);
             this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(37, 13);
-            this.resultLabel.TabIndex = 1;
-            this.resultLabel.Text = "Result";
+            this.resultLabel.Size = new System.Drawing.Size(614, 27);
+            this.resultLabel.TabIndex = 0;
+            this.resultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // quantumDropDown
             // 
@@ -84,7 +86,7 @@
             this.quantumRadioButton.Location = new System.Drawing.Point(30, 15);
             this.quantumRadioButton.Name = "quantumRadioButton";
             this.quantumRadioButton.Size = new System.Drawing.Size(68, 17);
-            this.quantumRadioButton.TabIndex = 3;
+            this.quantumRadioButton.TabIndex = 1;
             this.quantumRadioButton.TabStop = true;
             this.quantumRadioButton.Text = "Quantum";
             this.quantumRadioButton.UseVisualStyleBackColor = true;
@@ -96,7 +98,7 @@
             this.classicalRadioButton.Location = new System.Drawing.Point(30, 38);
             this.classicalRadioButton.Name = "classicalRadioButton";
             this.classicalRadioButton.Size = new System.Drawing.Size(66, 17);
-            this.classicalRadioButton.TabIndex = 4;
+            this.classicalRadioButton.TabIndex = 3;
             this.classicalRadioButton.Text = "Classical";
             this.classicalRadioButton.UseVisualStyleBackColor = true;
             this.classicalRadioButton.CheckedChanged += new System.EventHandler(this.classicalRadioButton_CheckedChanged);
@@ -112,7 +114,7 @@
             this.classicalDropDown.Location = new System.Drawing.Point(104, 41);
             this.classicalDropDown.Name = "classicalDropDown";
             this.classicalDropDown.Size = new System.Drawing.Size(121, 21);
-            this.classicalDropDown.TabIndex = 5;
+            this.classicalDropDown.TabIndex = 4;
             this.classicalDropDown.SelectedIndexChanged += new System.EventHandler(this.classicalDropDown_SelectedIndexChanged);
             // 
             // firstInputBitBtn
@@ -121,7 +123,7 @@
             this.firstInputBitBtn.Location = new System.Drawing.Point(30, 112);
             this.firstInputBitBtn.Name = "firstInputBitBtn";
             this.firstInputBitBtn.Size = new System.Drawing.Size(70, 70);
-            this.firstInputBitBtn.TabIndex = 8;
+            this.firstInputBitBtn.TabIndex = 7;
             this.firstInputBitBtn.UseVisualStyleBackColor = true;
             this.firstInputBitBtn.Click += new System.EventHandler(this.firstInputBit_Click);
             // 
@@ -131,7 +133,7 @@
             this.secondInputBitBtn.Location = new System.Drawing.Point(30, 201);
             this.secondInputBitBtn.Name = "secondInputBitBtn";
             this.secondInputBitBtn.Size = new System.Drawing.Size(70, 70);
-            this.secondInputBitBtn.TabIndex = 9;
+            this.secondInputBitBtn.TabIndex = 8;
             this.secondInputBitBtn.UseVisualStyleBackColor = true;
             this.secondInputBitBtn.Click += new System.EventHandler(this.secondInputBit_Click);
             // 
@@ -141,7 +143,7 @@
             this.firstOutputBitBtn.Location = new System.Drawing.Point(713, 112);
             this.firstOutputBitBtn.Name = "firstOutputBitBtn";
             this.firstOutputBitBtn.Size = new System.Drawing.Size(70, 70);
-            this.firstOutputBitBtn.TabIndex = 10;
+            this.firstOutputBitBtn.TabIndex = 0;
             this.firstOutputBitBtn.UseVisualStyleBackColor = true;
             // 
             // gatePictureBox
@@ -160,12 +162,12 @@
             this.secondOutputBitBtn.Location = new System.Drawing.Point(713, 201);
             this.secondOutputBitBtn.Name = "secondOutputBitBtn";
             this.secondOutputBitBtn.Size = new System.Drawing.Size(70, 70);
-            this.secondOutputBitBtn.TabIndex = 12;
+            this.secondOutputBitBtn.TabIndex = 0;
             this.secondOutputBitBtn.UseVisualStyleBackColor = true;
             // 
             // numEvalsInput
             // 
-            this.numEvalsInput.Location = new System.Drawing.Point(643, 418);
+            this.numEvalsInput.Location = new System.Drawing.Point(638, 415);
             this.numEvalsInput.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -179,18 +181,27 @@
             this.numEvalsInput.Name = "numEvalsInput";
             this.numEvalsInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.numEvalsInput.Size = new System.Drawing.Size(64, 20);
-            this.numEvalsInput.TabIndex = 0;
+            this.numEvalsInput.TabIndex = 5;
             this.numEvalsInput.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.resultLabel);
+            this.panel1.Location = new System.Drawing.Point(12, 415);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(620, 27);
+            this.panel1.TabIndex = 12;
+            // 
             // Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(810, 454);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.numEvalsInput);
             this.Controls.Add(this.secondOutputBitBtn);
             this.Controls.Add(this.gatePictureBox);
@@ -201,12 +212,13 @@
             this.Controls.Add(this.classicalRadioButton);
             this.Controls.Add(this.quantumRadioButton);
             this.Controls.Add(this.quantumDropDown);
-            this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.RunGateSim);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Gui";
-            this.Text = "Main";
+            this.Text = "Quantum Gate Simulator";
             ((System.ComponentModel.ISupportInitialize)(this.gatePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEvalsInput)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,5 +238,6 @@
         private System.Windows.Forms.PictureBox gatePictureBox;
         private System.Windows.Forms.Button secondOutputBitBtn;
         private System.Windows.Forms.NumericUpDown numEvalsInput;
+        private System.Windows.Forms.Panel panel1;
     }
 }

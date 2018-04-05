@@ -39,6 +39,9 @@
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Quantum.Canon, Version=0.1.6591.40679, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Quantum.Canon.0.1.1801.1707-preview\lib\net461\Microsoft.Quantum.Canon.dll</HintPath>
@@ -117,6 +120,7 @@
     <None Include="Images\ClassicalNOTGate.png" />
     <None Include="Images\ClassicalANDGate.png" />
     <None Include="Images\ClassicalORGate.png" />
+    <Content Include="icon.ico" />
     <Content Include="Images\File_Hadamard_gate.svg" />
     <Content Include="Images\Quantum-Hadamard-gate.png" />
     <None Include="Images\QuantumNOTGate.png" />

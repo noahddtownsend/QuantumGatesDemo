@@ -367,12 +367,12 @@ namespace Quantum.PublicGates
                         if ((y == 0L))
                         {
 #line 104 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
-                            QuantumCoreSet.Apply((Result.Zero, qubits[0L]));
+                            QuantumCoreSet.Apply((Result.Zero, qubits[1L]));
                         }
                         else
                         {
 #line 107 "C:\\Users\\gen6n\\source\\repos\\00 - Quantum Gates Example\\QuantumGatesDemo\\Quantum Gates Example - Visual Studio Project\\HelloWorld\\Gates.qs"
-                            QuantumCoreSet.Apply((Result.One, qubits[0L]));
+                            QuantumCoreSet.Apply((Result.One, qubits[1L]));
                         }
                     }
                     else

@@ -68,13 +68,18 @@ namespace Quantum.Gates
             {
                 System.Threading.Thread.CurrentThread.IsBackground = true;
 
-                int i = 0;
+                int returnedValue = 0;
+                int numEvals = 0;
+                int numOnesFirstBit = 0;
+                int numOnesSecondBit = 0;
                 int index = 0;
+
                 try
                 {
                     this.Invoke((MethodInvoker)delegate
                     {
                         index = quantumDropDown.SelectedIndex;
+                        numEvals = (int)numEvalsInput.Value;
                     });
                 }
                 catch (InvalidOperationException e)
@@ -87,17 +92,24 @@ namespace Quantum.Gates
                     switch (index)
                     {
                         case (int)QuantumGates.Hadamard:
+                            
+                            for (int i = 0; i < numEvals; ++i)
+                            {
+                                returnedValue = Quantum.PublicGates.Driver.HadamardGate((int)firstInputBit.getBitState());
+                                if (returnedValue == 1)
+                                {
+                                    ++numOnesFirstBit;
+                                }
+                            }
 
-                            i = Quantum.PublicGates.Driver.HadamardGate((int)firstInputBit.getBitState());
-
-                            if (i == 0)
+                            if (returnedValue == 0)
                             {
                                 this.Invoke((MethodInvoker)delegate
                                 {
                                     firstOutputBit.setBitStateZero();
                                 });
                             }
-                            else if (i == 1)
+                            else if (returnedValue == 1)
                             {
                                 this.Invoke((MethodInvoker)delegate
                                 {
@@ -106,19 +118,27 @@ namespace Quantum.Gates
                             }
                             this.Invoke((MethodInvoker)delegate
                             {
-                                resultLabel.Text = $"The gate returned {i,-4}";
+                                resultLabel.Text = $"The gate returned {numOnesFirstBit} |1> and {(numEvals - numOnesFirstBit)} |0>";
                             });
                             break;
                         case (int)QuantumGates.NOT:
-                            i = Quantum.PublicGates.Driver.NotGate((int)firstInputBit.getBitState());
-                            if (i == 0)
+                            for (int i = 0; i < numEvals; ++i)
+                            {
+                                returnedValue = Quantum.PublicGates.Driver.NotGate((int)firstInputBit.getBitState());
+                                if (returnedValue == 1)
+                                {
+                                    ++numOnesFirstBit;
+                                }
+                            }
+                            
+                            if (returnedValue == 0)
                             {
                                 this.Invoke((MethodInvoker)delegate
                                 {
                                     firstOutputBit.setBitStateZero();
                                 });
                             }
-                            else if (i == 1)
+                            else if (returnedValue == 1)
                             {
                                 this.Invoke((MethodInvoker)delegate
                                 {
@@ -127,12 +147,29 @@ namespace Quantum.Gates
                             }
                             this.Invoke((MethodInvoker)delegate
                             {
-                                resultLabel.Text = $"The gate returned {i,-4}";
+                                resultLabel.Text = $"The gate returned {numOnesFirstBit} |1> and {(numEvals - numOnesFirstBit)} |0>";
                             });
                             break;
                         case (int)QuantumGates.CNOT:
-                            var j = Quantum.PublicGates.Driver.CNotGate((int)firstInputBit.getBitState(), (int)secondInputBit.getBitState());
-                            var (a, b) = j;
+                            Tuple<int, int> j = new Tuple<int, int>(0,0);
+
+                            for (int i = 0; i < numEvals; ++i)
+                            {
+                                j = Quantum.PublicGates.Driver.CNotGate((int)firstInputBit.getBitState(), (int)secondInputBit.getBitState());
+                                if (j.Item1 == 1)
+                                {
+                                    ++numOnesFirstBit;
+                                }
+                                
+                                if (j.Item2 == 1)
+                                {
+                                    ++numOnesSecondBit;
+                                }
+
+                            }
+
+                            
+                             var (a, b) = j;
 
                             if (a == 0)
                             {
@@ -166,7 +203,7 @@ namespace Quantum.Gates
 
                             this.Invoke((MethodInvoker)delegate
                             {
-                                resultLabel.Text = $"The gate returned {a}, {b,-4}";
+                                resultLabel.Text = $"The gate returned {numOnesFirstBit} |1> and {(numEvals - numOnesFirstBit)} |0> the first bit and {numOnesSecondBit} |1> and {(numEvals - numOnesSecondBit)} |0> on the second bit";
                             });
                             break;
                     }
@@ -316,6 +353,7 @@ namespace Quantum.Gates
             if (quantumRadioButton.Checked)
             {
                 quantumDropDown.Enabled = true;
+                numEvalsInput.Enabled = true;
                 quantumGateFactory();
             }
             else
@@ -329,6 +367,7 @@ namespace Quantum.Gates
             if (classicalRadioButton.Checked)
             {
                 classicalDropDown.Enabled = true;
+                numEvalsInput.Enabled = false;
                 classicalGateFactory();
             }
             else

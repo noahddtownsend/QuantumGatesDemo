@@ -101,10 +101,10 @@ namespace Quantum.PublicGates
 
 				if (y != 2) {
 					if (y == 0) {
-						Quantum.Core.Set (Zero, qubits[0]);
+						Quantum.Core.Set (Zero, qubits[1]);
 					}
 					else {
-						Quantum.Core.Set (One, qubits[0]);
+						Quantum.Core.Set (One, qubits[1]);
 					}		
 				} else {
 					H (qubits[1]);
