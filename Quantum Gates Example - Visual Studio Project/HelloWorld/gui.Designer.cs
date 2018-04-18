@@ -42,9 +42,12 @@
             this.secondOutputBitBtn = new System.Windows.Forms.Button();
             this.numEvalsInput = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.descriptionLabel = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gatePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEvalsInput)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // RunGateSim
@@ -196,11 +199,32 @@
             this.panel1.Size = new System.Drawing.Size(620, 27);
             this.panel1.TabIndex = 12;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.descriptionLabel);
+            this.panel2.Location = new System.Drawing.Point(104, 333);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(603, 76);
+            this.panel2.TabIndex = 13;
+            // 
+            // descriptionLabel
+            // 
+            this.descriptionLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.descriptionLabel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descriptionLabel.Location = new System.Drawing.Point(0, -1);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.ReadOnly = true;
+            this.descriptionLabel.Size = new System.Drawing.Size(603, 77);
+            this.descriptionLabel.TabIndex = 14;
+            this.descriptionLabel.Text = "";
+            // 
             // Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 454);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.numEvalsInput);
             this.Controls.Add(this.secondOutputBitBtn);
@@ -213,12 +237,15 @@
             this.Controls.Add(this.quantumRadioButton);
             this.Controls.Add(this.quantumDropDown);
             this.Controls.Add(this.RunGateSim);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Gui";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quantum Gate Simulator";
             ((System.ComponentModel.ISupportInitialize)(this.gatePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEvalsInput)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +266,7 @@
         private System.Windows.Forms.Button secondOutputBitBtn;
         private System.Windows.Forms.NumericUpDown numEvalsInput;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RichTextBox descriptionLabel;
     }
 }
