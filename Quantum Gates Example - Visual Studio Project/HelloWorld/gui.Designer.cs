@@ -58,7 +58,7 @@
             this.RunGateSim.TabIndex = 6;
             this.RunGateSim.Text = "Evaluate";
             this.RunGateSim.UseVisualStyleBackColor = true;
-            this.RunGateSim.Click += new System.EventHandler(this.runSimClick);
+            this.RunGateSim.Click += new System.EventHandler(this.RunSimClick);
             // 
             // resultLabel
             // 
@@ -80,7 +80,7 @@
             this.quantumDropDown.Name = "quantumDropDown";
             this.quantumDropDown.Size = new System.Drawing.Size(121, 21);
             this.quantumDropDown.TabIndex = 2;
-            this.quantumDropDown.SelectedIndexChanged += new System.EventHandler(this.quantumDropDown_SelectedIndexChanged);
+            this.quantumDropDown.SelectedIndexChanged += new System.EventHandler(this.QuantumDropDown_SelectedIndexChanged);
             // 
             // quantumRadioButton
             // 
@@ -93,7 +93,7 @@
             this.quantumRadioButton.TabStop = true;
             this.quantumRadioButton.Text = "Quantum";
             this.quantumRadioButton.UseVisualStyleBackColor = true;
-            this.quantumRadioButton.CheckedChanged += new System.EventHandler(this.quantumRadioButton_CheckedChanged);
+            this.quantumRadioButton.CheckedChanged += new System.EventHandler(this.QuantumRadioButton_CheckedChanged);
             // 
             // classicalRadioButton
             // 
@@ -104,7 +104,7 @@
             this.classicalRadioButton.TabIndex = 3;
             this.classicalRadioButton.Text = "Classical";
             this.classicalRadioButton.UseVisualStyleBackColor = true;
-            this.classicalRadioButton.CheckedChanged += new System.EventHandler(this.classicalRadioButton_CheckedChanged);
+            this.classicalRadioButton.CheckedChanged += new System.EventHandler(this.ClassicalRadioButton_CheckedChanged);
             // 
             // classicalDropDown
             // 
@@ -118,7 +118,7 @@
             this.classicalDropDown.Name = "classicalDropDown";
             this.classicalDropDown.Size = new System.Drawing.Size(121, 21);
             this.classicalDropDown.TabIndex = 4;
-            this.classicalDropDown.SelectedIndexChanged += new System.EventHandler(this.classicalDropDown_SelectedIndexChanged);
+            this.classicalDropDown.SelectedIndexChanged += new System.EventHandler(this.ClassicalDropDown_SelectedIndexChanged);
             // 
             // firstInputBitBtn
             // 
@@ -128,7 +128,7 @@
             this.firstInputBitBtn.Size = new System.Drawing.Size(70, 70);
             this.firstInputBitBtn.TabIndex = 7;
             this.firstInputBitBtn.UseVisualStyleBackColor = true;
-            this.firstInputBitBtn.Click += new System.EventHandler(this.firstInputBit_Click);
+            this.firstInputBitBtn.Click += new System.EventHandler(this.FirstInputBit_Click);
             // 
             // secondInputBitBtn
             // 
@@ -138,7 +138,7 @@
             this.secondInputBitBtn.Size = new System.Drawing.Size(70, 70);
             this.secondInputBitBtn.TabIndex = 8;
             this.secondInputBitBtn.UseVisualStyleBackColor = true;
-            this.secondInputBitBtn.Click += new System.EventHandler(this.secondInputBit_Click);
+            this.secondInputBitBtn.Click += new System.EventHandler(this.SecondInputBit_Click);
             // 
             // firstOutputBitBtn
             // 

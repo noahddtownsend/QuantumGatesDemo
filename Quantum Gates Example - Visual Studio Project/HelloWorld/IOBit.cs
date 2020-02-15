@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Quantum.Gates
@@ -24,36 +19,55 @@ namespace Quantum.Gates
         public Button visualRep;
         private BitStates bitState;
 
-        public IOBit(Button visualRep)
+        private Font normalFont = new Font("Microsoft Sans", 10);
+        private Font smallFont = new Font("Microsoft Sans", 6);
+
+        public IOBit(Button visualRep, bool isQuantum)
         {
             this.visualRep = visualRep;
             this.visualRep.FlatStyle = FlatStyle.Flat;
-            setBitStateZero();
+            SetBitStateZero(isQuantum);
             
         }
 
-        public void setBitStateZero()
+        public void SetBitStateZero(bool isQuantum)
         {
             bitState = BitStates.Zero;
             visualRep.BackColor = ZERO_COLOR;
-            visualRep.Text = "0";
+            if (isQuantum)
+            {
+                visualRep.Text = "|0>";
+            } else
+            {
+                visualRep.Text = "0";
+            }
+            visualRep.Font = normalFont;
         }
 
-        public void setBitStateOne()
+        public void SetBitStateOne(bool isQuantum)
         {
             bitState = BitStates.One;
             visualRep.BackColor = ONE_COLOR;
-            visualRep.Text = "1";
+            if (isQuantum)
+            {
+                visualRep.Text = "|1>";
+            }
+            else
+            {
+                visualRep.Text = "1";
+            }
+            visualRep.Font = normalFont;
         }
 
-        public void setBitStateQuantum()
+        public void SetBitStateQuantum()
         {
             bitState = BitStates.QSuper;
             visualRep.BackColor = QUANTUM_COLOR;
-            visualRep.Text = "Quantum";
+            visualRep.Text = "Quantum Superposition";
+            visualRep.Font = smallFont;
         }
 
-        public BitStates getBitState()
+        public BitStates GetBitState()
         {
             return bitState;
         }
